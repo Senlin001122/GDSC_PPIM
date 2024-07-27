@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_top">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@600&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        .search-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .search-container input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        .search-container button {
+            background-color: #4CAF50;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .search-container button i {
+            color: white;
+        }
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .friends-list {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            width: 60%;
+        }
+        .friends-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .friends-list th, .friends-list td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        .friends-list th {
+            background-color: #f2f2f2;
+        }
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 35%;
+        }
+        .buttons-container .styled-button {
+            background-color: #a5a1a1;
+            color: white;
+            font-family: 'Cascadia Code', monospace;
+            font-weight: 600;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .buttons-container .styled-button:hover {
+            background-color: #8b8888;
+        }
+        .buttons-container div img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .section-title-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0 10px 10px;
+        }
+        .section-title {
+            margin: 0;
+        }
+        .more-link {
+            font-size: 14px;
+        }
+        .announcement-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px;
+            border-radius: 8px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1>Website Name</h1>
+    <div class="search-container">
+        <input type="text" id="searchField" placeholder="type id/name/martic">
+        <button onclick="submitSearch()"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="content-container">
+        <div class="friends-list">
+            <h2>Friends List</h2>
+            <table>
+                <tr>
+                    <th>1</th>
+                    <th>name 1</th>
+                    <th><img src="logo" alt="logo"><img src="logo" alt="logo"><img src="logo" alt="logo"></th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th>name 2</th>
+                    <th><img src="logo" alt="logo"><img src="logo" alt="logo"><img src="logo" alt="logo"></th>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <th>name 3</th>
+                    <th><img src="logo" alt="logo"><img src="logo" alt="logo"><img src="logo" alt="logo"></th>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <th>name 4</th>
+                    <th><img src="logo" alt="logo"><img src="logo" alt="logo"><img src="logo" alt="logo"></th>
+                </tr>
+            </table>
+        </div>
+        <div class="buttons-container">
+            <div class="styled-button" onclick="openModal('modal1')">Notification</div>
+            <div class="styled-button" onclick="openModal('modal2')">Private Group</div>
+            <div class="styled-button" onclick="openModal('modal3')">Personal Information</div>
+            <div class="styled-button" onclick="openModal('modal4')">Public Group</div>
+        </div>
+    </div>
+    <div class="section-title-container">
+        <h2 class="section-title">News and event announcement</h2>
+        <a href="News_event.html" class="more-link">More...</a>
+    </div>
+    <div class="announcement-container">
+        <div class="buttons-container">
+            <a href="https://gdsc.community.dev/events/details/developer-student-clubs-asia-pacific-university-kuala-lumpur-malaysia-presents-google-workspace-hackathon-2024-malaysia/" target="_blank">
+                <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWTCw8HuT_u4vFDVWaeSklkHEk6n38SMaU9w&s" alt="button 5"></div>
+            </a>
+            <div><img src="button6.png" alt="button 6"></div>
+        </div>
+        <div class="buttons-container">
+            <div><img src="button7.png" alt="button 7"></div>
+            <div><img src="button8.png" alt="button 8"></div>
+        </div>
+    </div>
+    <div class="section-title-container">
+        <h2 class="section-title">Open Recruitment announcement</h2>
+        <a href="Open_recruitment.html" class="more-link">More...</a>
+    </div>
+    <div class="announcement-container">
+        <div class="buttons-container">
+            <div><img src="button9.png" alt="button 9"></div>
+            <div><img src="button10.png" alt="button 10"></div>
+        </div>
+        <div class="buttons-container">
+            <div><img src="button11.png" alt="button 11"></div>
+            <div><img src="button12.png" alt="button 12"></div>
+        </div>
+    </div>
+
+    <!-- Modal Windows -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <p>Notification Content</p>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <p>Private Group Content</p>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <p>Personal Information Content</p>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <p>Public Group Content</p>
+        </div>
+    </div>
+
+    <script>
+        function submitSearch() {
+            var input = document.getElementById('searchField').value;
+            google.script.run.processForm(input);
+            alert("搜索内容: " + input);
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
