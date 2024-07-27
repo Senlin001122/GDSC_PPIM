@@ -8,36 +8,39 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            color: #333;
         }
         h1 {
-            color: #4CAF50;
+            color: #000000;
             text-align: center;
-        }
+            }
         .search-container {
             width: 100%;
             max-width: 800px;
             margin: 0 auto;
             display: flex;
             align-items: center;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 50px;
             overflow: hidden;
             margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+            padding: 10px; /* 添加内边距 */
+            position: relative;
         }
         .search-container input {
             width: 100%;
-            padding: 10px;
+            padding: 10px 10px 10px 40px; /* 调整内边距以留出空间放置图标 */
             border: none;
             outline: none;
+            color: #666;
+            border-radius: 50px;
         }
-        .search-container button {
-            background-color: #4CAF50;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-        .search-container button i {
-            color: white;
+        .search-container .search-icon {
+            position: absolute;
+            left: 15px; /* 调整图标的位置 */
+            color: #666;
         }
         .content-container {
             display: flex;
@@ -49,6 +52,7 @@
             border-radius: 8px;
             padding: 10px;
             width: 60%;
+            background: white;
         }
         .friends-list table {
             width: 100%;
@@ -141,14 +145,19 @@
             text-decoration: none;
             cursor: pointer;
         }
+        .modal-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <h1>Website Name</h1>
     <div class="search-container">
-        <input type="text" id="searchField" placeholder="type id/name/martic">
-        <button onclick="submitSearch()"><i class="fas fa-search"></i></button>
+        <i class="fas fa-search search-icon"></i> <!-- 添加放大镜图标 -->
+        <input type="text" id="searchField" placeholder="Type ID/NAME">
     </div>
     <div class="content-container">
         <div class="friends-list">
@@ -218,24 +227,28 @@
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-header">Following Requirement</div>
             <p>Notification Content</p>
         </div>
     </div>
     <div id="modal2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <div class="modal-header">Joined Groups</div>
             <p>Private Group Content</p>
         </div>
     </div>
     <div id="modal3" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <div class="modal-header">Personal Information</div>
             <p>Personal Information Content</p>
         </div>
     </div>
     <div id="modal4" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <div class="modal-header">Public Group</div>
             <p>Public Group Content</p>
         </div>
     </div>
