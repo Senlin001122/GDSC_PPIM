@@ -1,65 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>News and Event</title>
+    <title>University Events & Activities</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: linear-gradient(to right, #ece9e6, #ffffff);
-            color: #333;
+            background-color: #f4f4f4;
         }
         h1 {
-            color: #1e1c1c;
+            color: #333;
             text-align: center;
         }
-        .news-container {
+        .event-container {
             width: 80%;
-            margin: 20px auto;
+            margin: 0 auto;
         }
-        .news-item {
+        .event-item {
             display: flex;
-            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
             margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background: white;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #fff;
         }
-        .news-item img {
-            max-height: 50px;
-            border: 1px solid #ccc;
-            padding: 5px;
-            border-radius: 8px;
-            margin-right: 20px;
+        .event-image {
+            flex: 1;
+            min-width: 200px;
+            max-width: 200px;
+            height: 150px; /* Adjust height to maintain aspect ratio */
         }
-        .news-item a {
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .event-details {
+            flex: 2;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .event-title {
+            font-size: 1.5em;
+            color: #000;
+            margin: 0;
+        }
+        .event-description {
+            font-size: 1em;
+            color: #555;
+            margin: 10px 0;
+        }
+        .event-date {
+            font-size: 0.9em;
+            color: #999;
+        }
+        .event-link {
+            align-self: flex-end;
+            font-size: 1em;
+            color: #4CAF50;
             text-decoration: none;
-            color: #6f6d6d; /* 更改subtitles颜色 */
-            font-size: 18px;
+        }
+        .event-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>News and Event Announcement</h1>
-    <div class="news-container">
-        <div class="news-item">
-            <img src="logo1.png" alt="Logo 1">
-            <a href="https://example.com/news1" target="_blank">Subtitle 1</a>
+<h1>University Events & Activities</h1>
+<div class="event-container">
+    <div class="event-item">
+        <div class="event-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWTCw8HuT_u4vFDVWaeSklkHEk6n38SMaU9w&s" alt="Event 1">
         </div>
-        <div class="news-item">
-            <img src="logo2.png" alt="Logo 2">
-            <a href="https://example.com/news2" target="_blank">Subtitle 2</a>
+        <div class="event-details">
+            <h2 class="event-title">Google Workspace Hackathon 2024 Malaysia</h2>
+            <p class="event-description">Ready to innovate and collaborate? Join the electrifying hackathon by GDSC APU & Reluate Technologies!</p>
+            <p class="event-date">Date: 1st Jul - 17th Aug 2024, 2024</p>
+            <a href="https://gdsc.community.dev/events/details/developer-student-clubs-asia-pacific-university-kuala-lumpur-malaysia-presents-google-workspace-hackathon-2024-malaysia/" class="event-link" target="_blank">Learn More</a>
         </div>
-        <div class="news-item">
-            <img src="logo3.png" alt="Logo 3">
-            <a href="https://example.com/news3" target="_blank">Subtitle 3</a>
-        </div>
-        <!-- Add more news items as needed -->
     </div>
+
+    <div class="event-item">
+        <div class="event-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXmDBsfCDDGYLHkjFr6h9JEs5qCrL4TJDwVA&s" alt="Event 2">
+        </div>
+        <div class="event-details">
+            <h2 class="event-title">Postgraduate Info Day</h2>
+            <p class="event-description">Join us for an information session about postgraduate studies. Learn more about programs, admissions, and scholarships.</p>
+            <p class="event-date">Date: August 17, 2024</p>
+            <a href="https://www.monash.edu.my/postgraduate-info-day?utm_campaign=PDYMY_BRA&utm_source=print&utm_medium=qr_code&utm_content=PGDISCOV_AUG24_MY&subdivision=Malaysia" class="event-link" target="_blank">Learn More</a>
+        </div>
+    </div>
+
+    <div class="event-item">
+        <div class="event-image">
+            <img src="https://www.ucsiuniversity.edu.my/sites/default/files/ucsi_logo_box.jpg" alt="Event 3">
+        </div>
+        <div class="event-details">
+            <h2 class="event-title">UCSI University Open Day</h2>
+            <p class="event-description">Explore UCSI University during our open day. Discover our programs, meet faculty, and learn about campus life.</p>
+            <p class="event-date">Date: August 27-28, 2024</p>
+            <a href="https://openday.ucsiuniversity.edu.my" class="event-link" target="_blank">Learn More</a>
+        </div>
+    </div>
+
+    <div class="event-item">
+        <div class="event-image">
+            <img src="https://cdn.eduadvisor.my/institution/hwum/ea-inst-logo-hwum.png" alt="Event 4">
+        </div>
+        <div class="event-details">
+            <h2 class="event-title">HWUM Summer Programme</h2>
+            <p class="event-description">This summer programme is suitable for any student who would like to be in a warm country, have an amazing multicultural summer of delicious food and experience “Malaysia, Truly Asia”. This programme is open to any student from any university to register.</p>
+            <p class="event-date">Date: 4th Aug - 17th Aug 2024</p>
+            <a href="https://www.hw.ac.uk/malaysia/study/summer-programme.htm" class="event-link" target="_blank">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Add more event items as needed -->
+</div>
 </body>
 </html>
