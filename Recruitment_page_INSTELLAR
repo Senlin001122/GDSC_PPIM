@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Open Recruitment For INSTELLAR 2024 Committee!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@600&display=swap');
+
+    body {
+      font-family: 'Cascadia Code', monospace;
+      margin: 20px;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      color: #333;
+    }
+    h1 {
+      color: #000000;
+      text-align: center;
+    }
+    .content-container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .image-container {
+      text-align: center;
+    }
+    .image-container img {
+      max-width: 75%;
+      border: 1px solid #ccc;
+      padding: 5px;
+      border-radius: 8px;
+    }
+    .text-container {
+      margin-top: 20px;
+    }
+    .text-container p {
+      line-height: 1.6;
+    }
+    .highlight {
+      font-weight: bold;
+    }
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    .styled-button {
+      background-color: #a5a1a1;
+      color: white;
+      font-family: 'Cascadia Code', monospace;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .styled-button:hover {
+      background-color: #8b8888;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+<h1>Open Recruitment For INSTELLAR 2024 Committee!</h1>
+<div class="content-container">
+  <div class="text-container">
+    <p>Published Date: May 21, 2024</p>
+  </div>
+  <div class="image-container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIiT3pAiELsJAITbcQQbSNo-O-n02jwsP0hA&s" alt="INSTELLAR_REC.jpeg">
+  </div>
+  <div class="text-container">
+    <p>We are excited to announce our highly anticipated event of the year is back! Join us in INSTELLAR 2024, proudly presented by <strong>Theme and Strategic Studies, Political Science, and Advocacy of PPIA</strong>, a prestigious event that celebrates the achievements and contributions of international students.</p>
+
+    <p class="highlight">What is INSTELLAR?</p>
+    <p>INSTELLAR stands for <strong>Inspirational Talents, Scholars, and Intellectual Symposium for Outstanding Leaders of All Regions</strong>. The event is designed to provide a platform for students to showcase their talents, engage in intellectual discussions, and connect with peers from different backgrounds.</p>
+
+    <p class="highlight">Event Highlights:</p>
+    <ul>
+      <li><strong>Panels:</strong> Discussions on current global issues and the inspiring narratives of both prominent and emerging leaders</li>
+      <li><strong>Workshops:</strong> Interactive sessions to develop skills and knowledge</li>
+      <li><strong>Talent Show:</strong> Showcase your unique talents and compete for exciting prizes</li>
+      <li><strong>Networking Sessions:</strong> Build connections with peers, alumni, and industry professionals</li>
+    </ul>
+
+    <p>INSTELLAR 2024 promises to be bigger and better, bringing you more insightful discussions, fun-filled workshops, and the opportunity to showcase your talents on a grand stage.</p>
+
+    <p class="highlight">Join Our Committee!</p>
+    <p>We are looking for passionate and dedicated individuals to be part of the organizing team. Gain invaluable experience in event management and be part of this memorable event.</p>
+
+    <p class="highlight">Recruitment Details:</p>
+    <p><strong>Batch 1 Registration:</strong> May 21, 2024</p>
+    <p><strong>Available Divisions:</strong></p>
+    <ul>
+      <li>Academic</li>
+      <li>Event Management</li>
+      <li>Public Relations</li>
+      <li>Sponsorship</li>
+      <li>Logistics</li>
+      <li>Publication & Documentation</li>
+    </ul>
+
+    <p>Interested? Sign up now and be part of INSTELLAR 2024:</p>
+    <ul>
+      <li><a href="https://example.com/register1" target="_blank">Registration Link 1</a></li>
+      <li><a href="https://example.com/register2" target="_blank">Registration Link 2</a></li>
+    </ul>
+
+    <p class="highlight">Follow Us:</p>
+    <ul>
+      <li><a href="https://instagram.com/instellar" target="_blank">Instagram</a></li>
+      <li><a href="https://twitter.com/instellar" target="_blank">Twitter</a></li>
+    </ul>
+
+    <p>Contact Person:</p>
+    <ul>
+      <li>Hanif: <a href="https://wa.me/601123954400" target="_blank">WhatsApp</a></li>
+      <li>Yang: <a href="https://wa.me/8613979683441" target="_blank">WhatsApp</a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
