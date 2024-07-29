@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_top">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #a5a1a1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #8b8888;
+        }
+        .success-message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Register and Login</h1>
+    <div class="form-container">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <input type="text" id="registerUsername" placeholder="Username" required><br>
+            <input type="password" id="registerPassword" placeholder="Password" required><br>
+            <input type="email" id="registerEmail" placeholder="Email" required><br>
+            <button type="submit">Register</button>
+        </form>
+        <div id="registerSuccess" class="success-message">Registration successful!</div>
+    </div>
+
+    <div class="form-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Username" required><br>
+            <input type="password" id="loginPassword" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            google.script.run.withSuccessHandler(function(response) {
+                document.getElementById('registerSuccess').style.display = 'block';
+            }).registerUser(
+                document.getElementById('registerUsername').value,
+                document.getElementById('registerPassword').value,
+                document.getElementById('registerEmail').value
+            );
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            google.script.run.withSuccessHandler(function(result) {
+                if (result === 'Login successful') {
+                    google.script.history.push(null, { page: 'hub' });
+                } else {
+                    alert(result);
+                }
+            }).loginUser(
+                document.getElementById('loginUsername').value,
+                document.getElementById('loginPassword').value
+            );
+        });
+    </script>
+</body>
+</html>
+
