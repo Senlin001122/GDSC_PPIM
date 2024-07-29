@@ -116,6 +116,8 @@
         }
         .more-link {
             font-size: 14px;
+            cursor: pointer;
+            text-decoration: underline;
         }
         .announcement-container {
             display: flex;
@@ -166,7 +168,7 @@
     <h1>Website Name</h1>
     <div class="search-container">
         <i class="fas fa-search search-icon"></i>
-        <input type="text" id="searchField" placeholder="type id/name/martic">
+        <input type="text" id="searchField" placeholder="Type Name" onkeypress="handleKeyPress(event)">
     </div>
     <div class="content-container">
         <div class="friends-list">
@@ -174,22 +176,22 @@
             <table>
                 <tr>
                     <th>1</th>
-                    <th>name 1</th>
+                    <th>Hanif</th>
                     <th><span class="material-symbols-outlined">chat</span><span class="material-symbols-outlined">contacts</span></th>
                 </tr>
                 <tr>
                     <th>2</th>
-                    <th>name 2</th>
+                    <th>Javan</th>
                     <th><span class="material-symbols-outlined">chat</span><span class="material-symbols-outlined">contacts</span></th>
                 </tr>
                 <tr>
                     <th>3</th>
-                    <th>name 3</th>
+                    <th>Yang Zixun</th>
                     <th><span class="material-symbols-outlined">chat</span><span class="material-symbols-outlined">contacts</span></th>
                 </tr>
                 <tr>
                     <th>4</th>
-                    <th>name 4</th>
+                    <th>Dilirebar</th>
                     <th><span class="material-symbols-outlined">chat</span><span class="material-symbols-outlined">contacts</span></th>
                 </tr>
             </table>
@@ -210,15 +212,17 @@
             <a href="https://gdsc.community.dev/events/details/developer-student-clubs-asia-pacific-university-kuala-lumpur-malaysia-presents-google-workspace-hackathon-2024-malaysia/" target="_blank">
                 <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWTCw8HuT_u4vFDVWaeSklkHEk6n38SMaU9w&s" width="180" height="180" alt="button 5"></div>
             </a>
-            <a href="https://www.monash.edu.my/postgraduate-info-day?utm_campaign=PDYMY_BRA&utm_source=print&utm_medium=qr_code&utm_content=PGDISCOV_AUG24_MY&subdivision=Malaysia"  target="_blank">
-            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXmDBsfCDDGYLHkjFr6h9JEs5qCrL4TJDwVA&s" width="180" height="180" alt="button 6"></div>
+            <a href="https://www.monash.edu.my/postgraduate-info-day?utm_campaign=PDYMY_BRA&utm_source=print&utm_medium=qr_code&utm_content=PGDISCOV_AUG24_MY&subdivision=Malaysia" target="_blank">
+                <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXmDBsfCDDGYLHkjFr6h9JEs5qCrL4TJDwVA&s" width="180" height="180" alt="button 6"></div>
             </a>
         </div>
         <div class="buttons-container">
-            <a href="https://openday.ucsiuniversity.edu.my"  target="_blank">
-        </div><div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR8y9ZDsvA9NHsWgJQbo7g9C97_XgzkS8bww&s" width="180" height="180" alt="button 7"></div></a>
-
-            <a href="https://www.hw.ac.uk/malaysia/study/summer-programme.htm" target="_blank"><div><img src="https://cdn.eduadvisor.my/institution/hwum/ea-inst-logo-hwum.png" width="180" height="180" alt="button 8"></div></a>
+            <a href="https://openday.ucsiuniversity.edu.my" target="_blank">
+                <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR8y9ZDsvA9NHsWgJQbo7g9C97_XgzkS8bww&s" width="180" height="180" alt="button 7"></div>
+            </a>
+            <a href="https://www.hw.ac.uk/malaysia/study/summer-programme.htm" target="_blank">
+                <div><img src="https://cdn.eduadvisor.my/institution/hwum/ea-inst-logo-hwum.png" width="180" height="180" alt="button 8"></div>
+            </a>
         </div>
     </div>
     <div class="section-title-container">
@@ -227,12 +231,13 @@
     </div>
     <div class="announcement-container">
         <div class="buttons-container">
-            <div><img src="button9.png" alt="button 9"></div>
-            <div><img src="button10.png" alt="button 10"></div>
+          <a href="?page=Recruitment_page_INSTELLAR" class="recruitment-link" onclick="loadPage('Recruitment_page_INSTELLAR'); return false;">
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw6h4o92h9GlqmWCEAKF_szWoD-4VJkFLNSg&s" width="180" height="180" alt="button 9"></div></a>
+            <a href="?page=Recruitment_page_EDUFAIR" class="recruitment-link" onclick="loadPage('Recruitment_page_EDUFAIR'); return false;"><div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWhsk-qg_z2Oy3LCux4HII4gW_sPjOsKtiJg&s" alt="button 10"></div></a>
         </div>
         <div class="buttons-container">
-            <div><img src="button11.png" alt="button 11"></div>
-            <div><img src="button12.png" alt="button 12"></div>
+            <a href="?page=Recruitment_page_Entrepreneur_Mentorship" class="recruitment-link" onclick="loadPage('Recruitment_page_Entrepreneur_Mentorship'); return false;"><div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIiT3pAiELsJAITbcQQbSNo-O-n02jwsP0hA&s" width="180" height="180" alt="button 11"></div></a>
+            <a href="?page=Recruitment_page_PPIM_Mengabdi" class="recruitment-link" onclick="loadPage('Recruitment_page_PPIM_Mengabdi'); return false;"><div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThfbi-dxTIbm8C0_BzHxSIXPMW6wV-QS3Kkw&s" alt="button 12"></div></a>
         </div>
     </div>
 
@@ -241,36 +246,101 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
             <div class="modal-header">Following Requirement</div>
-            <p>Notification Content</p>
+            <p>No Following Requirement</p>
         </div>
     </div>
     <div id="modal2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal2')">&times;</span>
             <div class="modal-header">Joined Groups</div>
-            <p>Private Group Content</p>
+            <p>Not Join Any Group</p>
         </div>
     </div>
     <div id="modal3" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal3')">&times;</span>
             <div class="modal-header">Personal Information</div>
-            <p>Personal Information Content</p>
+            <p>Username: rizky</p>
+            <p>Email: rizky@gmail.com</p>
         </div>
     </div>
     <div id="modal4" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal4')">&times;</span>
             <div class="modal-header">Public Group</div>
-            <p>Public Group Content</p>
+            <p>Not Join Any Group</p>
+        </div>
+    </div>
+
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('searchModal')">&times;</span>
+            <div class="modal-header">Search Results</div>
+            <div id="searchResults"></div>
         </div>
     </div>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            loadFriendsList();
+            loadPersonalInfo();
+        });
+
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                submitSearch();
+            }
+        }
+
         function submitSearch() {
             var input = document.getElementById('searchField').value;
-            google.script.run.processForm(input);
-            alert("搜索内容: " + input);
+            google.script.run.withSuccessHandler(showSearchResults).searchUsers(input);
+        }
+
+        function showSearchResults(results) {
+            var searchResults = document.getElementById('searchResults');
+            searchResults.innerHTML = '';
+            
+            if (results.length > 0) {
+                results.forEach(function(user) {
+                    var div = document.createElement('div');
+                    div.innerHTML = user.name + ' <button onclick="addFriend(\'' + user.email + '\')">Add Friend</button>';
+                    searchResults.appendChild(div);
+                });
+            } else {
+                searchResults.innerHTML = 'No results found';
+            }
+
+            openModal('searchModal');
+        }
+
+        function loadFriendsList() {
+            google.script.run.withSuccessHandler(displayFriendsList).getFriends();
+        }
+
+        function displayFriendsList(friends) {
+            var friendsTable = document.getElementById('friendsTable');
+            friendsTable.innerHTML = '<tr><th>#</th><th>Name</th><th>Actions</th></tr>'; // Reset table content
+            
+            friends.forEach(function(friend, index) {
+                var row = friendsTable.insertRow();
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+
+                cell1.innerHTML = index + 1;
+                cell2.innerHTML = friend.name;
+                cell3.innerHTML = '<button onclick="removeFriend(\'' + friend.email + '\')">Remove Friend</button>';
+            });
+        }
+
+        function addFriend(email) {
+            google.script.run.withSuccessHandler(loadFriendsList).addFriend(email);
+            closeModal('searchModal');
+        }
+
+        function removeFriend(email) {
+            google.script.run.withSuccessHandler(loadFriendsList).removeFriend(email);
         }
 
         function openModal(modalId) {
@@ -297,6 +367,15 @@
                 document.write(html);
                 document.close();
             }).getPage(page);
+        }
+
+        function loadPersonalInfo() {
+            google.script.run.withSuccessHandler(displayPersonalInfo).getPersonalInfo();
+        }
+
+        function displayPersonalInfo(info) {
+            var personalInfoContent = document.getElementById('personalInfoContent');
+            personalInfoContent.innerHTML = '<p>Username: ' + info.username + '</p><p>Email: ' + info.email + '</p>';
         }
     </script>
 </body>
