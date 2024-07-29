@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_top">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@600&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            color: #333;
+        }
+        h1 {
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-weight: bold;
+        }
+        .search-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            border-radius: 50px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            position: relative;
+        }
+        .search-container input {
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            border: none;
+            outline: none;
+            color: #666;
+            border-radius: 50px;
+        }
+        .search-container .search-icon {
+            position: absolute;
+            left: 15px;
+            color: #666;
+        }
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .friends-list {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            width: 60%;
+            background: white;
+        }
+        .friends-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .friends-list th, .friends-list td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        .friends-list th {
+            background-color: #f2f2f2;
+        }
+        .friends-list .material-symbols-outlined {
+            font-size: 24px;
+            color: #6f6d6d;
+            margin-right: 10px;
+        }
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 35%;
+        }
+        .buttons-container .styled-button {
+            background-color: #a5a1a1;
+            color: white;
+            font-family: 'Cascadia Code', monospace;
+            font-weight: 600;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .buttons-container .styled-button:hover {
+            background-color: #8b8888;
+        }
+        .buttons-container div img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .section-title-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0 10px 10px;
+        }
+        .section-title {
+            margin: 0;
+        }
+        .more-link {
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .announcement-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px;
+            border-radius: 8px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1>Website Name</h1>
+    <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchField" placeholder="type id/name/martic" onkeypress="handleKeyPress(event)">
+    </div>
+    <div class="content-container">
+        <div class="friends-list">
+            <h2>Friends List</h2>
+            <table id="friendsTable">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+            </table>
+        </div>
+        <div class="buttons-container">
+            <div class="styled-button" onclick="openModal('modal1')">Notification</div>
+            <div class="styled-button" onclick="openModal('modal2')">Private Group</div>
+            <div class="styled-button" onclick="openModal('modal3')">Personal Information</div>
+            <div class="styled-button" onclick="openModal('modal4')">Public Group</div>
+        </div>
+    </div>
+    <div class="section-title-container">
+        <h2 class="section-title">News and event announcement</h2>
+        <div class="more-link" onclick="loadPage('News_event')">More...</div>
+    </div>
+    <div class="announcement-container">
+        <div class="buttons-container">
+            <a href="https://gdsc.community.dev/events/details/developer-student-clubs-asia-pacific-university-kuala-lumpur-malaysia-presents-google-workspace-hackathon-2024-malaysia/" target="_blank">
+                <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWTCw8HuT_u4vFDVWaeSklkHEk6n38SMaU9w&s" alt="button 5"></div>
+            </a>
+            <div><img src="button6.png" alt="button 6"></div>
+        </div>
+        <div class="buttons-container">
+            <div><img src="button7.png" alt="button 7"></div>
+            <div><img src="button8.png" alt="button 8"></div>
+        </div>
+    </div>
+    <div class="section-title-container">
+        <h2 class="section-title">Open Recruitment announcement</h2>
+        <div class="more-link" onclick="loadPage('Open_recruitment')">More...</div>
+    </div>
+    <div class="announcement-container">
+        <div class="buttons-container">
+            <div><img src="button9.png" alt="button 9"></div>
+            <div><img src="button10.png" alt="button 10"></div>
+        </div>
+        <div class="buttons-container">
+            <div><img src="button11.png" alt="button 11"></div>
+            <div><img src="button12.png" alt="button 12"></div>
+        </div>
+    </div>
+
+    <!-- Modal Windows -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-header">Notifications</div>
+            <p>No Notifications</p>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <div class="modal-header">Joined Groups</div>
+            <p>No Joined Groups</p>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <div class="modal-header">Personal Information</div>
+            <p>Username: Cai</p>
+            <p>Email: Cai@gmail.com</p>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <div class="modal-header">Public Group</div>
+            <p>No Public Groups</p>
+        </div>
+    </div>
+
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('searchModal')">&times;</span>
+            <div class="modal-header">Search Results</div>
+            <div id="searchResults"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            loadFriendsList();
+        });
+
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                submitSearch();
+            }
+        }
+
+        function submitSearch() {
+            var input = document.getElementById('searchField').value;
+            google.script.run.withSuccessHandler(showSearchResults).searchUsers(input);
+        }
+
+        function showSearchResults(results) {
+            var searchResults = document.getElementById('searchResults');
+            searchResults.innerHTML = '';
+            
+            if (results.length > 0) {
+                results.forEach(function(user) {
+                    var div = document.createElement('div');
+                    div.innerHTML = user.name + ' <button onclick="addFriend(\'' + user.email + '\')">Add Friend</button>';
+                    searchResults.appendChild(div);
+                });
+            } else {
+                searchResults.innerHTML = 'No results found';
+            }
+
+            openModal('searchModal');
+        }
+
+        function loadFriendsList() {
+            google.script.run.withSuccessHandler(displayFriendsList).getFriends();
+        }
+
+        function displayFriendsList(friends) {
+            var friendsTable = document.getElementById('friendsTable');
+            friendsTable.innerHTML = '<tr><th>#</th><th>Name</th><th>Actions</th></tr>'; // Reset table content
+            
+            friends.forEach(function(friend, index) {
+                var row = friendsTable.insertRow();
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+
+                cell1.innerHTML = index + 1;
+                cell2.innerHTML = friend.name;
+                cell3.innerHTML = '<button onclick="removeFriend(\'' + friend.email + '\')">Remove Friend</button>';
+            });
+        }
+
+        function addFriend(email) {
+            google.script.run.withSuccessHandler(loadFriendsList).addFriend(email);
+            closeModal('searchModal');
+        }
+
+        function removeFriend(email) {
+            google.script.run.withSuccessHandler(loadFriendsList).removeFriend(email);
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+
+        function loadPage(page) {
+            google.script.history.push({state: {page: page}, title: page, url: '?page=' + page});
+            google.script.run.withSuccessHandler(function(html) {
+                document.open();
+                document.write(html);
+                document.close();
+            }).loadPage(page);
+        }
+    </script>
+</body>
+</html>
+
