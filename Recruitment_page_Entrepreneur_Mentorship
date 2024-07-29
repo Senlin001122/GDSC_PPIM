@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open Recruitment For Entrepreneur Mentorship 2024 Committee!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@600&display=swap');
+
+        body {
+            font-family: 'Cascadia Code', monospace;
+            margin: 20px;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            color: #333;
+        }
+        h1 {
+            color: #000000;
+            text-align: center;
+        }
+        .content-container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 75%;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 8px;
+        }
+        .text-container {
+            margin-top: 20px;
+        }
+        .text-container p {
+            line-height: 1.6;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .styled-button {
+            background-color: #a5a1a1;
+            color: white;
+            font-family: 'Cascadia Code', monospace;
+            font-weight: 600;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .styled-button:hover {
+            background-color: #8b8888;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Open Recruitment For Entrepreneur Mentorship 2024 Committee!</h1>
+<div class="content-container">
+    <div class="text-container">
+        <p>Published Date: July 15, 2024</p>
+    </div>
+    <div class="image-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWhsk-qg_z2Oy3LCux4HII4gW_sPjOsKtiJg&s" alt="Entrepreneur.png">
+    </div>
+    <div class="text-container">
+        <p>Hello, Friends!<br>
+            We invite you to become a part of the Entrepreneur Mentorship 2024 team!</p>
+
+        <p>The Entrepreneur Mentorship program is an initiative by the Department of Funds and Business, PPI Malaysia, which provides a platform for students to learn about entrepreneurship, enhance their knowledge and skills in starting and developing businesses, and promote the growth and development of MSMEs in Indonesia.</p>
+
+        <p class="highlight">Interested in joining the Entrepreneur Mentorship Committee? Register now!</p>
+        <p>For available division choices, please refer to the booklet linked below:</p>
+        <ul>
+            <li>Booklet: <a href="https://bit.ly/bookletentrepreneurmentorship2024" target="_blank">https://bit.ly/bookletentrepreneurmentorship2024</a></li>
+        </ul>
+
+        <p><strong>Registration Deadline:</strong> 16 July 2024</p>
+        <p><strong>Interview Timeline:</strong> 18 July 2024</p>
+
+        <p>Register through the link below:</p>
+        <ul>
+            <li>Registration Link: <a href="https://bit.ly/entrepreneurmentorship2024" target="_blank">https://bit.ly/entrepreneurmentorship2024</a></li>
+        </ul>
+
+        <p>For more information, contact:</p>
+        <ul>
+            <li>Hanif: <a href="https://wa.me/601123954400" target="_blank">WhatsApp</a></li>
+            <li>Yang: <a href="https://wa.me/8613979683441" target="_blank">WhatsApp</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
