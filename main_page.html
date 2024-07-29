@@ -116,8 +116,6 @@
         }
         .more-link {
             font-size: 14px;
-            cursor: pointer;
-            text-decoration: underline;
         }
         .announcement-container {
             display: flex;
@@ -205,7 +203,7 @@
     </div>
     <div class="section-title-container">
         <h2 class="section-title">News and event announcement</h2>
-        <div class="more-link" onclick="loadPage('News_event')">More...</div>
+        <a href="?page=News_event" class="more-link" onclick="loadPage('News_event'); return false;">More...</a>
     </div>
     <div class="announcement-container">
         <div class="buttons-container">
@@ -221,7 +219,7 @@
     </div>
     <div class="section-title-container">
         <h2 class="section-title">Open Recruitment announcement</h2>
-        <div class="more-link" onclick="loadPage('Open_recruitment')">More...</div>
+        <a href="?page=Open_recruitment" class="more-link" onclick="loadPage('Open_recruitment'); return false;">More...</a>
     </div>
     <div class="announcement-container">
         <div class="buttons-container">
@@ -290,12 +288,11 @@
         }
 
         function loadPage(page) {
-            google.script.history.push({state: {page: page}, title: page, url: '?page=' + page});
             google.script.run.withSuccessHandler(function(html) {
                 document.open();
                 document.write(html);
                 document.close();
-            }).loadPage(page);
+            }).getPage(page);
         }
     </script>
 </body>
