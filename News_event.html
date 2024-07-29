@@ -65,7 +65,26 @@
         .event-link:hover {
             text-decoration: underline;
         }
+        .main-link {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .main-link:hover {
+            background-color: #45a049;
+        }
     </style>
+    <script>
+        function loadPage(page) {
+            window.location.href = page + ".html";
+        }
+    </script>
 </head>
 <body>
 <h1>University Events & Activities</h1>
@@ -120,5 +139,7 @@
 
     <!-- Add more event items as needed -->
 </div>
+
+<a href="?page=main_page" class="main-link" onclick="loadPage('main_page'); return false;">Go Back</a>
 </body>
 </html>
