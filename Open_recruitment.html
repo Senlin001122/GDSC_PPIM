@@ -1,65 +1,147 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>News and Event</title>
+    <title>Open Recruitment Announcements</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: linear-gradient(to right, #ece9e6, #ffffff);
-            color: #333;
+            background-color: #f4f4f4;
         }
         h1 {
-            color: #1e1c1c;
+            color: #333;
             text-align: center;
         }
-        .news-container {
+        .recruitment-container {
             width: 80%;
-            margin: 20px auto;
+            margin: 0 auto;
         }
-        .news-item {
+        .recruitment-item {
             display: flex;
-            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
             margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background: white;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #fff;
         }
-        .news-item img {
-            max-height: 50px;
-            border: 1px solid #ccc;
-            padding: 5px;
-            border-radius: 8px;
-            margin-right: 20px;
+        .recruitment-image {
+            flex: 1;
+            min-width: 200px;
         }
-        .news-item a {
+        .recruitment-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .recruitment-details {
+            flex: 2;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .recruitment-title {
+            font-size: 1.5em;
+            color: #000;
+            margin: 0;
+        }
+        .recruitment-description {
+            font-size: 1em;
+            color: #555;
+            margin: 10px 0;
+        }
+        .recruitment-date {
+            font-size: 0.9em;
+            color: #999;
+        }
+        .recruitment-link {
+            align-self: flex-end;
+            font-size: 1em;
+            color: #4CAF50;
             text-decoration: none;
-            color: #6f6d6d; /* 更改subtitles颜色 */
-            font-size: 18px;
+        }
+        .recruitment-link:hover {
+            text-decoration: underline;
+        }
+        .main-link {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .main-link:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <h1>Open Recruitment announcement</h1>
-    <div class="news-container">
-        <div class="news-item">
-            <img src="logo1.png" alt="Logo 1">
-            <a href="https://example.com/news1" target="_blank">Subtitle 1</a>
+<h1>Open Recruitment Announcements</h1>
+<div class="recruitment-container">
+    <div class="recruitment-item">
+        <div class="recruitment-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw6h4o92h9GlqmWCEAKF_szWoD-4VJkFLNSg&s" alt="INSTELLAR_REC.jpeg">
         </div>
-        <div class="news-item">
-            <img src="logo2.png" alt="Logo 2">
-            <a href="https://example.com/news2" target="_blank">Subtitle 2</a>
+        <div class="recruitment-details">
+            <h2 class="recruitment-title">INSTELLAR 2024</h2>
+            <p class="recruitment-description">
+                INSTELLAR stands for Inspirational Talents, Scholars, and Intellectual Symposium for Outstanding Leaders of All Regions. The event is designed to provide a platform for students to showcase their talents, engage in intellectual discussions, and connect with peers from different backgrounds.
+            </p>
+            <p class="recruitment-date">Registration: May 21, 2024</p>
+            <a href="?page=Recruitment_page_INSTELLAR" class="recruitment-link" onclick="loadPage('Recruitment_page_INSTELLAR'); return false;">Learn More</a>
         </div>
-        <div class="news-item">
-            <img src="logo3.png" alt="Logo 3">
-            <a href="https://example.com/news3" target="_blank">Subtitle 3</a>
-        </div>
-        <!-- Add more news items as needed -->
     </div>
+
+    <div class="recruitment-item">
+        <div class="recruitment-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWhsk-qg_z2Oy3LCux4HII4gW_sPjOsKtiJg&s" alt="EDUFAIR_REC.jpg">
+        </div>
+        <div class="recruitment-details">
+            <h2 class="recruitment-title">EDUFAIR 2024</h2>
+            <p class="recruitment-description">
+                Want to travel around cities in Indonesia? Come join us and be a part of Edufair 2024, an annual event organized by PPI Malaysia!
+            </p>
+            <p class="recruitment-date">Registration: July 3, 2024</p>
+            <a href="?page=Recruitment_page_EDUFAIR" class="recruitment-link" onclick="loadPage('Recruitment_page_EDUFAIR'); return false;">Learn More</a>
+        </div>
+    </div>
+
+    <div class="recruitment-item">
+        <div class="recruitment-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIiT3pAiELsJAITbcQQbSNo-O-n02jwsP0hA&s" alt="Entrepreneur.png">
+        </div>
+        <div class="recruitment-details">
+            <h2 class="recruitment-title">Entrepreneur Mentorship 2024</h2>
+            <p class="recruitment-description">
+                Join the Entrepreneur Mentorship 2024 program, a great opportunity to learn about entrepreneurship, enhance your knowledge and skills, and support the growth of small businesses in Indonesia.
+            </p>
+            <p class="recruitment-date">Registration closes: July 30, 2024</p>
+            <a href="?page=Recruitment_page_Entrepreneur_Mentorship" class="recruitment-link" onclick="loadPage('Recruitment_page_Entrepreneur_Mentorship'); return false;">Learn More</a>
+        </div>
+    </div>
+
+    <div class="recruitment-item">
+        <div class="recruitment-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThfbi-dxTIbm8C0_BzHxSIXPMW6wV-QS3Kkw&s" alt="PPIM Mengabdi.jpg">
+        </div>
+        <div class="recruitment-details">
+            <h2 class="recruitment-title">PPIM Mengabdi 2024</h2>
+            <p class="recruitment-description">
+                Symphony of Support: Learning, Growing, and Inspiring with PPIM Mengabdi 2024. Get involved in community service, fundraising, and education.
+            </p>
+            <p class="recruitment-date">Registration: July 8-12, 2024</p>
+            <a href="?page=Recruitment_page_PPIM_Mengabdi" class="recruitment-link" onclick="loadPage('Recruitment_page_PPIM_Mengabdi'); return false;">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Add more recruitment items as needed -->
+</div>
+
+<button class="main-link" onclick="history.back()">Go Back</button>
 </body>
 </html>
